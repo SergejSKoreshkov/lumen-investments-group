@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="row main-container">
-            <div class="col-8 col-md-6 offset-md-3 offset-2">
+            <div class="col-10 col-md-6 offset-md-3 offset-1">
                 <img class="logo-mounted" src="../assets/logo-blue.svg" alt="Lumen Investment Group">
                 <hr>
                 <h1>Webpage is under construction</h1>
@@ -55,7 +55,7 @@ export default {
         height: 100vh;
     }
     .head {
-        height: 60px !important;
+        height: 50px !important;
         padding: 10px;
         margin-right: 0;
     }
