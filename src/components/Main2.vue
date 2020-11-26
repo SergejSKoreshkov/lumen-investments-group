@@ -16,7 +16,7 @@
             <div class="col-10 col-md-6 offset-md-3 offset-1">
                 <img class="logo-mounted" src="../assets/logo-blue.svg" alt="Lumen Investment Group">
                 <hr>
-                <h1>Webpage is under construction</h1>
+                <h2>Webpage is under construction</h2>
             </div>
         </div>
     </div>
@@ -97,7 +97,7 @@ export default {
             margin-bottom: 2em;
         }
 
-        h1 {
+        h2 {
             margin-top: 1em;
             padding: 0;
             text-align: center;
