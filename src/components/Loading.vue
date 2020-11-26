@@ -14,7 +14,7 @@ export default {
     }
   },
   mounted () {
-    setTimeout(() => { this.loadingBlock = false }, 800)
+    setTimeout(() => { this.loadingBlock = false }, 500)
     window.addEventListener('load', () => {
       this.loaded = true
     })
