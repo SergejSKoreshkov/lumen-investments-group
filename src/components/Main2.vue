@@ -82,6 +82,7 @@ export default {
         img {
             height: 100% !important;
             width: unset;
+            margin: 10px;
         }
     }
     .main-container {

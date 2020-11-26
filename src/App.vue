@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="container">
-      <Main2 v-if="loaded"/>
+      <Main2 v-if="loaded && !loadingBlock"/>
       <Loading v-else/>
     </div>
   </div>
@@ -15,7 +15,8 @@ export default {
   name: 'App',
   data () {
     return {
-      loaded: false
+      loaded: false,
+      loadingBlock: true
     }
   },
   components: {
@@ -23,6 +24,7 @@ export default {
     Loading
   },
   mounted () {
+    setTimeout(() => { this.loadingBlock = true }, 800)
     window.addEventListener('load', () => {
       setTimeout(() => {
         this.loaded = true
