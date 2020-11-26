@@ -1,16 +1,33 @@
 <template>
   <div id="app">
-    <Main2/>
+    <div class="container">
+      <Main2 v-if="loaded"/>
+      <Loading v-else/>
+    </div>
   </div>
 </template>
 
 <script>
 import Main2 from './components/Main2.vue'
+import Loading from './components/Loading.vue'
 
 export default {
   name: 'App',
+  data () {
+    return {
+      loaded: false
+    }
+  },
   components: {
-    Main2
+    Main2,
+    Loading
+  },
+  mounted () {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        this.loaded = true
+      }, 300)
+    })
   }
 }
 </script>

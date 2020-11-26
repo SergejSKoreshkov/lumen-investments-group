@@ -13,10 +13,10 @@
             </div>
         </div>
         <div class="row main-container">
-            <div class="col-8 col-md-4 offset-md-4 offset-2">
-                <img src="../assets/logo-blue.svg" alt="Lumen Investment Group">
+            <div class="col-8 col-md-6 offset-md-3 offset-2">
+                <img class="logo-mounted" src="../assets/logo-blue.svg" alt="Lumen Investment Group">
                 <hr>
-                <h1>Coming soon</h1>
+                <h1>Webpage is under construction</h1>
             </div>
         </div>
     </div>
@@ -32,6 +32,15 @@ export default {
     Twitter,
     Facebook,
     Instagram
+  },
+  data () {
+    return {
+      mounted: false
+    }
+  },
+  mounted () {
+    console.log('mounted')
+    this.mounted = true
   }
 }
 </script>
@@ -42,11 +51,12 @@ export default {
         margin-right: 0;
     }
     .main {
-        width: 100vw;
+        width: 100%;
         height: 100vh;
     }
     .head {
-        height: 80px !important;
+        height: 60px !important;
+        padding: 10px;
         margin-right: 0;
     }
     .social {
@@ -93,6 +103,19 @@ export default {
             color: #dbdbdb;
             font-weight: lighter;
             text-transform: uppercase;
+        }
+    }
+    hr {
+        background: #dbdbdb;
+        animation: .7s lineOut ease;
+    }
+
+    @keyframes lineOut {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 100%;;
         }
     }
 </style>

@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "yarn build --dest docs && git add . && git commit -m 'DEPLOY TO GITHUB PAGES' && git push origin main"
+    "deploy": "yarn build --dest docs && git add . && git commit -m \"DEPLOY TO GITHUB PAGES\" && git push origin main"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
