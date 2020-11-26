@@ -1,7 +1,7 @@
 <template>
     <div class="loading">
-        <img :class="loaded ? 'change' : ''" src="../assets/logo-old.png">
-        <div :class="`lds-ring ${loaded ? 'change' : ''}`"><div></div><div></div><div></div><div></div></div>
+        <img :class="loaded && !loadingBlock ? 'change' : ''" src="../assets/logo-old.png">
+        <div :class="`lds-ring ${loaded && !loadingBlock ? 'change' : ''}`"><div></div><div></div><div></div><div></div></div>
     </div>
 </template>
 
@@ -9,10 +9,12 @@
 export default {
   data () {
     return {
-      loaded: false
+      loaded: false,
+      loadingBlock: true
     }
   },
   mounted () {
+    setTimeout(() => { this.loadingBlock = false }, 800)
     window.addEventListener('load', () => {
       this.loaded = true
     })
