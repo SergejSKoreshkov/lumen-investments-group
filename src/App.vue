@@ -12,25 +12,25 @@ import Main from './components/Main.vue'
 import Loading from './components/Loading.vue'
 
 export default {
-  name: 'App',
-  data () {
-    return {
-      loaded: false,
-      loadingBlock: true
+    name: 'App',
+    data () {
+        return {
+            loaded: false,
+            loadingBlock: true
+        }
+    },
+    components: {
+        Main,
+        Loading
+    },
+    mounted () {
+        setTimeout(() => { this.loadingBlock = false }, 800)
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                this.loaded = true
+            }, 300)
+        })
     }
-  },
-  components: {
-    Main,
-    Loading
-  },
-  mounted () {
-    setTimeout(() => { this.loadingBlock = false }, 800)
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        this.loaded = true
-      }, 300)
-    })
-  }
 }
 </script>
 

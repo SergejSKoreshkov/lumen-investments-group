@@ -28,20 +28,20 @@ import Facebook from 'vue-material-design-icons/Facebook.vue'
 import Instagram from 'vue-material-design-icons/Instagram'
 
 export default {
-  components: {
-    Twitter,
-    Facebook,
-    Instagram
-  },
-  data () {
-    return {
-      mounted: false
+    components: {
+        Twitter,
+        Facebook,
+        Instagram
+    },
+    data () {
+        return {
+            mounted: false
+        }
+    },
+    mounted () {
+        console.log('mounted')
+        this.mounted = true
     }
-  },
-  mounted () {
-    console.log('mounted')
-    this.mounted = true
-  }
 }
 </script>
 

@@ -9,18 +9,18 @@
 
 <script>
 export default {
-  data () {
-    return {
-      loaded: false,
-      loadingBlock: true
+    data () {
+        return {
+            loaded: false,
+            loadingBlock: true
+        }
+    },
+    mounted () {
+        setTimeout(() => { this.loadingBlock = false }, 500)
+        window.addEventListener('load', () => {
+            this.loaded = true
+        })
     }
-  },
-  mounted () {
-    setTimeout(() => { this.loadingBlock = false }, 500)
-    window.addEventListener('load', () => {
-      this.loaded = true
-    })
-  }
 }
 </script>
 
