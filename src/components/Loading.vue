@@ -1,7 +1,9 @@
 <template>
-    <div class="loading">
-        <img :class="loaded && !loadingBlock ? 'change' : ''" src="../assets/logo-old.png">
-        <div :class="`lds-ring ${loaded && !loadingBlock ? 'change' : ''}`"><div></div><div></div><div></div><div></div></div>
+    <div :class="`loading ${loaded && !loadingBlock ? 'change change-background' : ''}`">
+        <img :class="loaded && !loadingBlock ? 'change change-scale change-fade' : ''" src="../assets/logo-old.png">
+        <div :class="`lds-ring ${loaded && !loadingBlock ? 'change change-fade' : ''}`">
+            <div></div><div></div><div></div><div></div>
+        </div>
     </div>
 </template>
 
@@ -38,13 +40,21 @@ export default {
             width: 200px;
         }
     }
-
     .change {
         transition: .3s ease;
-        transform: scale(0.5);
-        opacity: 0;
-    }
 
+        &-scale {
+            transform: scale(0.5);
+        }
+
+        &-fade {
+            opacity: 0;
+        }
+
+        &-background {
+            background: #fff;
+        }
+    }
     .lds-ring {
         position: absolute;
         top: 50.5%;
