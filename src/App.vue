@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <div class="container">
-      <Main2 v-if="loaded && !loadingBlock"/>
+      <Main v-if="loaded && !loadingBlock"/>
       <Loading v-else/>
     </div>
   </div>
 </template>
 
 <script>
-import Main2 from './components/Main2.vue'
+import Main from './components/Main.vue'
 import Loading from './components/Loading.vue'
 
 export default {
@@ -20,7 +20,7 @@ export default {
     }
   },
   components: {
-    Main2,
+    Main,
     Loading
   },
   mounted () {
