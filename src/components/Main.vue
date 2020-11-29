@@ -55,7 +55,7 @@ export default {
         height: 100vh;
     }
     .head {
-        height: 50px !important;
+        height: 45px !important;
         padding: 10px;
         margin-right: 0;
     }
