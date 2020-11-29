@@ -43,8 +43,8 @@ export default {
   }
   @font-face {
     font-family: "Moderat";
-    src: url("//db.onlinewebfonts.com/t/0c3856a335fdfdb8b0652f7c3d367fdd.eot");
-    src: url("//db.onlinewebfonts.com/t/0c3856a335fdfdb8b0652f7c3d367fdd.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0c3856a335fdfdb8b0652f7c3d367fdd.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0c3856a335fdfdb8b0652f7c3d367fdd.woff") format("woff"), url("//db.onlinewebfonts.com/t/0c3856a335fdfdb8b0652f7c3d367fdd.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0c3856a335fdfdb8b0652f7c3d367fdd.svg#Moderat") format("svg");
+    src: url("/fonts/font.eot");
+    src: url("/fonts/fontFix.eot") format("embedded-opentype"), url("/fonts/font.woff2") format("woff2"), url("/fonts/font.woff") format("woff"), url("/fonts/font.ttf") format("truetype"), url("/fonts/font.svg") format("svg");
     }
     body {
       font-family: "Moderat"
