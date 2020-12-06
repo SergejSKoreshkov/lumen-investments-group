@@ -6,9 +6,8 @@
             </div>
             <div class="col-6 social">
                 <div class="icons">
-                    <Twitter></Twitter>
-                    <Facebook></Facebook>
-                    <Instagram></Instagram>
+                    <a class="d-sm-block d-none" href="mailto:nauda@lumeninvest.eu">nauda@lumeninvest.eu</a>
+                    <Email @click="mail()"></Email>
                 </div>
             </div>
         </div>
@@ -17,25 +16,27 @@
                 <img class="logo-mounted" src="../assets/logo-blue.svg" alt="Lumen Investment Group">
                 <hr>
                 <h2>Webpage is under construction</h2>
+                <h4>Coming soon</h4>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import Twitter from 'vue-material-design-icons/Twitter.vue'
-import Facebook from 'vue-material-design-icons/Facebook.vue'
-import Instagram from 'vue-material-design-icons/Instagram'
+import Email from 'vue-material-design-icons/Email'
 
 export default {
     components: {
-        Twitter,
-        Facebook,
-        Instagram
+        Email
     },
     data () {
         return {
             mounted: false
+        }
+    },
+    methods: {
+        mail () {
+            window.location.assign('mailto:nauda@lumeninvest.eu')
         }
     },
     mounted () {
@@ -69,9 +70,16 @@ export default {
         .icons {
             margin-left: auto;
             display: flex;
+            align-items: center;
             span {
                 font-size: 1.5em;
                 margin: 10px;
+                color: #101c54;
+                cursor: pointer;
+            }
+            a {
+                padding-top: .3em;
+                text-decoration: none;
                 color: #101c54;
             }
         }
@@ -97,7 +105,7 @@ export default {
             margin-bottom: 2em;
         }
 
-        h2 {
+        h2, h4 {
             margin-top: 1em;
             padding: 0;
             text-align: center;

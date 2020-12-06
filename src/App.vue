@@ -43,10 +43,13 @@ export default {
   }
   @font-face {
     font-family: "Moderat";
-    src: url("/lumen-investments-group/fonts/font.eot");
-    src: url("/lumen-investments-group/fonts/fontFix.eot") format("embedded-opentype"), url("/lumen-investments-group/fonts/font.woff2") format("woff2"), url("/lumen-investments-group/fonts/font.woff") format("woff"), url("/lumen-investments-group/fonts/font.ttf") format("truetype"), url("/lumen-investments-group/fonts/font.svg") format("svg");
+    src: url("/fonts/font.eot");
+    src: url("/fonts/fontFix.eot") format("embedded-opentype"), url("/fonts/font.woff2") format("woff2"), url("/fonts/font.woff") format("woff"), url("/fonts/font.ttf") format("truetype"), url("/fonts/font.svg") format("svg");
     }
     body {
+      font-family: "Moderat"
+    }
+    a {
       font-family: "Moderat"
     }
 </style>
